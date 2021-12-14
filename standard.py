@@ -35,10 +35,10 @@ total = df['subject'].value_counts()
 total.to_csv('additional_files/pathogen_final_result.csv')
 #print(total)
 
-df2 = pd.read_csv('additional_files/pathogen_final_result.csv', names = ['Pathogen', 'HITS'])
+df2 = pd.read_csv('additional_files/pathogen_final_result.csv', names = ['Organism', 'HITS'])
 df2 = df2.iloc[1:]
 df2['Relative Abundance(%)'] = (df2['HITS'].astype(float) / df2['HITS'].astype(float).sum()) * 100 
-df2.to_csv('Final_result/pathogen_final_result.csv')
+df2.to_csv('Final_result/final_result.csv')
 print(df2['HITS'].astype(float).sum())
 print(df2)
 
