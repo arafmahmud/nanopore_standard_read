@@ -27,12 +27,12 @@ Python dependencies:
 
 Download the database(https://drive.google.com/drive/folders/1rDwvenlss02S9Y_TfceOKQjduQG4IJVn?usp=sharing) files and put in the database folder.
 
-`usage: standard.py [-h] --sequence SEQUENCE
+`usage: standard.py [-h] --sequence SEQUENCE`
 
-optional arguments:
+`optional arguments:
   -h, --help            show this help message and exit
   --sequence SEQUENCE, -s SEQUENCE
-                        Raw sequence file in FASTQ format.
+                        Raw sequence file in FASTQ format.`
 
     Examples:
     python3 standard.py -s rawsequence.fastq`
