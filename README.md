@@ -14,9 +14,7 @@ seqtk:
 `sudo apt-get install seqtk`
 
 
-porechop:
 
-`sudo apt-get install porechop`
 
 
 
