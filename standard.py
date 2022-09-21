@@ -23,8 +23,8 @@ os.system("mkdir Final_result")
 
 in_seq = "seqtk seq -a {}.fastq > additional_files/test1.fasta".format(file_input)
 os.system(in_seq)
-os.system("porechop -i additional_files/test1.fasta -o additional_files/test2.fasta")
-os.system("seqtk seq -L 1000 additional_files/test2.fasta > additional_files/test_large_seq.fasta")
+
+os.system("seqtk seq -L 1000 additional_files/test1.fasta > additional_files/test_large_seq.fasta")
 os.system("blastn -query additional_files/test_large_seq.fasta -db database/zymo -out additional_files/query_pathogen_final.csv -outfmt 6 -evalue 1e-100 -max_target_seqs 10 -perc_identity 85 -qcov_hsp_perc 95 -task megablast")
 df = pd.read_csv("additional_files/query_pathogen_final.csv", sep = "\t", names = ['query' , 'subject', 'identity', "Alignment lenth", "mismatches", "gap opens", "qstart", "qend", "s start", "s end", "evalue", "bitscore"])
 #print(df)
